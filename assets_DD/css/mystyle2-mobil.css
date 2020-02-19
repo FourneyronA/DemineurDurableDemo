@@ -1,0 +1,446 @@
+/*Header Visualisation et partie */
+
+
+
+
+/*conatainer*/
+
+
+
+
+
+#map_container{
+	display: flex;
+	flex-direction: column;
+}
+
+#map_sub-container{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+#master-container{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+#btn-jeu-container{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+#btn_container{
+	display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/*esthétique*/
+
+.logomaster{
+	margin-right: 1vw;
+}
+
+.theme-button {
+	width: 10vw;
+	height: 10vw;
+	margin: 1vw;
+}
+
+
+#map{
+	width: 100%;
+	height: 100vw;
+	margin: 0vw;
+}
+
+
+
+
+
+#my-text-thematique{
+	margin-right: 10%;
+}
+
+
+.btn-light {
+	width: 100%;
+	margin-top: 1vw;
+    display: inline-block;
+    font-weight: 600;
+    color:rgba(232, 232, 228, .7);
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: rgba(232, 232, 228, .7);
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.btn-light.focus, .btn-light:focus {
+    color: rgba(232, 232, 228, .7);
+    background-color: rgba(232, 232, 228, .7);
+    border-color: transparent;
+    box-shadow: 0 0 0 0rem rgba(232, 232, 228, 0);
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.btn-light.focus, .btn-light:hover {
+    color: rgba(232, 232, 228, 1);
+    background-color: rgba(232, 232, 228, 1);
+    border-color: #ffffff;
+    box-shadow: 0 0 0 0rem rgba(232, 232, 228, .8);
+}
+
+.btn-light.focus, .btn-light:active {
+    color: #ffffff;
+    background-color: #ffffff;
+    border-color: #ffffff;
+    box-shadow:  #ffffff;
+}
+
+
+.btn-light-2 {
+	width: 50%;
+	margin-top: 1vw;
+	margin-right: 0.5vw;
+    display: inline-block;
+    font-weight: 600;
+    color:rgba(232, 232, 228, .7);
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: rgba(232, 232, 228, .7);
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.btn-light-2.focus, .btn-light-2:focus {
+    color: rgba(232, 232, 228, .7);
+    background-color: rgba(232, 232, 228, .7);
+    border-color: transparent;
+    box-shadow: 0 0 0 0rem rgba(232, 232, 228, 0);
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.btn-light-2.focus, .btn-light-2:hover {
+    color: rgba(232, 232, 228, 1);
+    background-color: rgba(232, 232, 228, 1);
+    border-color: #ffffff;
+    box-shadow: 0 0 0 0rem rgba(232, 232, 228, .8);
+}
+
+
+.btn-light-3 {
+	width: 50%;
+	margin-top: 1vw;
+	margin-left: 0.5vw;
+    display: inline-block;
+    font-weight: 600;
+    color:rgba(232, 232, 228, .7);
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: rgba(232, 232, 228, .7);
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.btn-light-3.focus, .btn-light-3:focus {
+    color: rgba(232, 232, 228, .7);
+    background-color: rgba(232, 232, 228, .7);
+    border-color: transparent;
+    box-shadow: 0 0 0 0rem rgba(232, 232, 228, 0);
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.btn-light-3.focus, .btn-light-3:hover {
+    color: rgba(232, 232, 228, 1);
+    background-color: rgba(232, 232, 228, 1);
+    border-color: #ffffff;
+    box-shadow: 0 0 0 0rem rgba(232, 232, 228, .8);
+}
+
+.btn-light-4 {
+    width: 33%;
+    margin-bottom: : 1vw;
+    margin-right: 0.5vw;
+    display: inline-block;
+    font-weight: 600;
+    color:rgba(232, 232, 228, .7);
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: rgba(232, 232, 228, .7);
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.btn-light-4.focus, .btn-light-4:focus {
+    color: rgba(232, 232, 228, .7);
+    background-color: rgba(232, 232, 228, .7);
+    border-color: transparent;
+    box-shadow: 0 0 0 0rem rgba(232, 232, 228, 0);
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.btn-light-4.focus, .btn-light-4:hover {
+    color: rgba(232, 232, 228, 1);
+    background-color: rgba(232, 232, 228, 1);
+    border-color: #ffffff;
+    box-shadow: 0 0 0 0rem rgba(232, 232, 228, .8);
+}
+
+.btn-light-5 {
+    width: 33%;
+    margin-bottom: 1vw;
+    display: inline-block;
+    font-weight: 600;
+    color:rgba(232, 232, 228, .7);
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: rgba(232, 232, 228, .7);
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.btn-light-5.focus, .btn-light-5:focus {
+    color: rgba(232, 232, 228, .7);
+    background-color: rgba(232, 232, 228, .7);
+    border-color: transparent;
+    box-shadow: 0 0 0 0rem rgba(232, 232, 228, 0);
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.btn-light-5.focus, .btn-light-5:hover {
+    color: rgba(232, 232, 228, 1);
+    background-color: rgba(232, 232, 228, 1);
+    border-color: #ffffff;
+    box-shadow: 0 0 0 0rem rgba(232, 232, 228, .8);
+}
+
+.btn-light-6 {
+    width: 33%;
+    margin-bottom: : 1vw;
+    margin-left: 0.5vw;
+    display: inline-block;
+    font-weight: 600;
+    color:rgba(232, 232, 228, .7);
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: rgba(232, 232, 228, .7);
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.btn-light-6.focus, .btn-light-6:focus {
+    color: rgba(232, 232, 228, .7);
+    background-color: rgba(232, 232, 228, .7);
+    border-color: transparent;
+    box-shadow: 0 0 0 0rem rgba(232, 232, 228, 0);
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.btn-light-6.focus, .btn-light-6:hover {
+    color: rgba(232, 232, 228, 1);
+    background-color: rgba(232, 232, 228, 1);
+    border-color: #ffffff;
+    box-shadow: 0 0 0 0rem rgba(232, 232, 228, .8);
+}
+
+.btn-outline-light{
+	width: 100%;
+	margin-top: 1vw;
+    display: inline-block;
+    font-weight: 600;
+    color:rgba(245, 245, 243, .7);
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: rgba(245, 245, 243, .8);
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.btn-outline-light:focus {
+    color: rgba(232, 232, 228, 1);
+    background-color:  rgba(232, 232, 228, 1);
+    border-color: transparent;
+    box-shadow: 0 0 0 0rem rgba(232, 232, 228,0);
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.btn-outline-light.focus, .btn-outline-light:hover {
+    color: rgba(232, 232, 228, 1);
+    background-color: rgba(232, 232, 228, 1);
+    border-color: #ffffff;
+    box-shadow: 0 0 0 0rem rgba(232, 232, 228, 0.7);
+}
+
+.btn-outline-light.focus, .btn-outline-light:active {
+    color: #ffffff;
+    background-color: #ffffff;
+    border-color: #ffffff;
+    box-shadow:  #ffffff;
+}
+
+.btn-change-visu{
+	width: 100%;
+	margin-top: 1vw;
+    display: inline-block;
+    font-weight: 600;
+    color:rgba(232, 232, 228, .7);
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: rgba(232, 232, 228, .7);
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.btn-change-visu:focus {
+    color: rgba(232, 232, 228, 1);
+    background-color:  rgba(232, 232, 228, 1);
+    border-color: transparent;
+    box-shadow: 0 0 0 0rem rgba(232, 232, 228,0);
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.btn-change-visu:hover {
+    color: rgba(232, 232, 228, 1);
+    background-color: rgba(232, 232, 228, 1);
+    border-color: #ffffff;
+    box-shadow: 0 0 0 0rem rgba(232, 232, 228, 0.7);
+}
+
+
+
+#texte-boutont{
+	font-size: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space:normal;
+}
+
+#texte-boutont-visu{
+	margin: 0;
+	font-family: inherit;
+	font-size: 80%;
+	line-height: inherit;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space:normal;
+}
+
+.card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: transparent;
+    background-clip: border-box;
+    border: transparent;
+    border-radius: .25rem;
+}
+
+[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+    cursor: pointer;
+}
+
+#my-text{
+	margin-right: 10%;
+}
+#my-title{
+	margin-right: 10%;
+}
+
+
+
+.modal-content{
+	margin-top: 10vw;
+}
+
+.theme-button{
+    padding: 0.2rem 0.2rem;
+    border-radius: .25rem;
+}
+
+.theme-button:hover {
+    background-color: rgba(232, 232, 228, 0.7);
+}
+
+#refmaster{
+    font-size: 85%;
+}

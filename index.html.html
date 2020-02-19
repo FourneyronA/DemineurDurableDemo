@@ -1,0 +1,197 @@
+<!DOCTYPE HTML>
+<!--
+	Solid State by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Demo Démineur Durable</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<!-- <noscript><link rel="stylesheet" href="assets_DD/css/noscript.css" /></noscript> -->
+		<link rel="stylesheet" href="library/leaflet/leaflet.css" />
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<link rel="stylesheet" href="assets_DD/css/main.css" />
+		<link rel="stylesheet" href="assets_DD/css/mystyle2-mobil.css" />
+		<script src ="library/leaflet/leaflet.js"></script>
+		<script src ="library/choropleth.js"></script>
+		<script src="Data/PM10centre.js"></script>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+		<div id="page-wrapper">
+
+				<!-- Header -->
+			<!-- <header id="header2">
+				<h1><a href="accueil.html">Accueil</a></h1>
+					<nav>
+						<a href="#menu">Menu</a>
+					</nav>
+			</header> -->
+
+				<!-- Menu -->
+			 <!-- <nav id="menu">
+				<div class="inner">
+					<h2>Menu</h2>
+					<ul class="links">
+						<li><a href="accueil.html">Accueil</a></li>
+						<li><a href="visualisation4.html">Visualiser</a></li>
+						<li><a href="jouer4.html">Jouer</a></li> -->
+						<!--<li><a href="#">Log In</a></li>
+						<li><a href="#">Sign Up</a></li>
+					</ul>
+					<a href="#" class="close">Close</a>
+				</div>
+			</nav> -->
+
+				<!-- Wrapper -->
+			<section id="wrapper">
+				<header>
+					<div class="inner">
+						<h2 id="montest">Tester la démo du Démineur durable</h2>
+					</div>
+				</header>
+
+						<!-- Content -->
+				<div class="wrapper">
+					<div class="inner">
+
+						<h2 id = 'titre_jeu'>Commencer à jouer avec la thématique PM10</h2>
+
+						<div id = "map_container">
+
+							<div id="btn_container">
+
+
+								<button type="button" class="btn-light-4" data-toggle="modal" data-target="#exampleModalScrollable1">
+									<div id = "texte-boutont-visu"> Thématique </div>
+								</button>
+								<div class="modal fade" id="exampleModalScrollable1" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+									<div class="modal-dialog modal-dialog-scrollable" role="document">
+										<div class="modal-content">
+											<div class="modal-header">
+												<h5 class="modal-title" id="exampleModalScrollableTitle">
+													<h4 id="my-title">Détaille sur la thématique</h4>
+												</h5>
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+													<span aria-hidden="true">&times;</span>
+												</button>
+											</div>
+											<div class="modal-body">
+										    	<p id = "my-text-thematique">Les PM10 sont des particules fines dont le diamètre est inférieur à 10 micromètres (µm). Elles font partie des particules polluantes pouvant présenter un risque pour notre santé. <br><br>La recommandation de <a onclick="window. open(this. href); return false;" href="https://www.who.int/fr/news-room/fact-sheets/detail/ambient-(outdoor)-air-quality-and-health"> <u>l’OMS</u> </a> (Organisation Mondiale de la Santé) est de ne pas dépasser les 20 µg/m3 en moyenne annuel. <br><br>Les données que vous pourrez visualiser une fois la partie terminée, représentent une moyenne des concentrations annuelles en µg/m3 sur des carrés de 200m de côté.
+										    	</p>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<button type="button" class="btn-light-5" data-toggle="modal" data-target="#exampleModalScrollable2"> 
+									<div id = "texte-boutont-visu">Méthode</div>
+								</button>
+								<div class="modal fade" id="exampleModalScrollable2" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+									<div class="modal-dialog modal-dialog-scrollable" role="document">
+										<div class="modal-content">
+											<div class="modal-header">
+												<h5 class="modal-title" id="exampleModalScrollableTitle">
+													<h4 id="my-title">Méthode de traitement des données </h4>
+												</h5>
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+													<span aria-hidden="true">&times;</span>
+												</button>
+											</div>
+											<div class="modal-body">
+										    	<p id = "my-text-metode">Les données ont à l’origine une résolution de 10m², elles ont été regroupées pour former des mailles de 200m². Chacune des mailles comporte la moyenne annuelle des émissions de PM10 dans cette zone. Les case violettes correspondent aux endroits les moins pollués de la zone, viennent ensuite les cases bleues, puis vertes et enfin les cases jaunes correspondant aux lieux les plus pollués. <br><br>Pour une légende plus détaillée, n’hésitez pas à essayer l’application complète.
+										    	</p>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<button type="button" class="btn-light-6" data-toggle="modal" data-target="#exampleModalScrollable3">
+								<div id = "texte-boutont-visu"> Sources </div>
+								</button>
+								<div class="modal fade" id="exampleModalScrollable3" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+									<div class="modal-dialog modal-dialog-scrollable" role="document">
+										<div class="modal-content">
+											<div class="modal-header">
+												<h5 class="modal-title" id="exampleModalScrollableTitle">
+													<h4 id="my-title">Sources des données</h4>
+												</h5>
+												<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+													<span aria-hidden="true">&times;</span>
+												</button>
+											</div>
+											<div class="modal-body">
+										    	<p id = "my-text-source">Les données sur la concentration annuelle en PM10 proviennent de l’organisme <a onclick="window. open(this. href); return false;" href="https://www.atmo-auvergnerhonealpes.fr/fiche-carte/exposition-la-pollution-atmospherique-en-2018"> <u>Atmo Auvergne-Rhône-Alpes.</u></a></p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+									<div id='map' class="map_jeu"></div> 
+									<div id='btn-jeu-container'>
+										<button type="button" class="btn-light-2" data-toggle="modal" data-target="#exampleModalScrollable0">
+										<div id = "texte-boutont-visu"> Règles </div>
+									</button>
+									<div class="modal fade" id="exampleModalScrollable0" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+										<div class="modal-dialog modal-dialog-scrollable" role="document">
+											<div class="modal-content">
+												<div class="modal-header">
+													<h5 class="modal-title" id="exampleModalScrollableTitle">
+														<h4 id="my-title">Comment jouer au démineur durable ?</h4>
+													</h5>
+													<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+														<span aria-hidden="true">&times;</span>
+													</button>
+												</div>
+												<div class="modal-body">
+											    	<p id = "regles">Le démineur est un jeu de réflexion dont le but est de découvrir toutes les cases en évitant les bombes. <br><br> En cliquant sur une case, vous découvrirez combien de bombes se trouvent dans les 8 cases adjacentes. Lorsque vous êtes certain de la présence d’une bombe vous prouvez sceller la case avec un drapeau un faisant un clic droit sur la case (un nouveau clic droit sur cette même case supprime le drapeau). <br><br>Ce démineur est un peu particulier : il se base sur une analyse spatiale et place aléatoirement les bombes dans les zones aux enjeux et aléas les plus élevés, ainsi si vous êtes bloqué sur votre partie vous pouvez tenter de dévoiler les cases que vous pensez les moins exposées. <br><br>Bon jeu ! 
+</p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<button type="button" class="btn-light-3" onClick='window.location.reload(false)'>
+										<a href="#titre_jeu">
+											<div id = "texte-boutont-visu"> Rejouer </div>
+										</a>
+									</button>
+								</div>
+							
+
+							
+						</div>
+
+					</div>
+				</div>
+				<div id="master-container">
+                    <a onclick="window. open(this. href); return false;" href="https://mastergeonum.org/">
+                    <div class="logomaster"><img src="https://mastergeonum.files.wordpress.com/2019/09/cropped-rvb_originalsite.png?w=1024&h=1024" width="60"></img></div>
+                    </a>
+                    <p id= "refmaster">Un projet réalisé par : <i>Mathilde Argoud, Axel Fourneyron, Lucas Jean-Jacques, Corentin Martinez</i>   <br> dans le cadre du <a onclick="window. open(this. href); return false;" href="https://mastergeonum.org/">Master Géographies Numériques</a></p>             
+                </div>
+
+			</section>
+
+				<!-- Footer -->
+
+		</div>
+
+		<!-- Scripts -->
+		<script src="assets_DD/js/jquery.min.js"></script>
+		<script src="assets_DD/js/jquery.scrollex.min.js"></script>
+		<script src="assets_DD/js/browser.min.js"></script>
+		<script src="assets_DD/js/breakpoints.min.js"></script>
+		<script src="assets_DD/js/util.js"></script>
+		<script src="assets_DD/js/main.js"></script>
+		<script src="assets_DD/js/myscript.js"></script>
+		<script src="testdemin.js"></script>
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+	</body>
+</html>
