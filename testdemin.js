@@ -1,5 +1,5 @@
 /////////////////////////////// PREPARATION DE LA CARTOGRPAHIE //////////////////////////////////////////////////////////////////////////////////////////////////////////
-
+nombre_de_partie = 0; 
 var map = L.map('map',{
   minZoom: 12,
   maxZoom: 14
@@ -42,6 +42,7 @@ console.log(Object.keys(PM10.features))
 // PLACEMENT DES BOMBES
 while (comptetot > 0) {
     var keyal = Math.floor(Math.random()* (PM10.features.length - 1) +1);
+
     //console.log(keyal)
     if ((PM10.features[keyal].properties.Classe == 3 & comptebomb3 > 0) | (PM10.features[keyal].properties.Classe == 2 & comptebomb2 > 0)) {
       if (PM10.features[keyal].properties.Bombnum != 99) {
@@ -385,25 +386,26 @@ update_encart = function (encart) {
 
 // PARTIE GAGNEE
 gagne = function() {
-  if (nb_case_ouv >= (100-nbbombtot)){
-  // enlever la grille du jeu
-      alert('ENORME !!!! \nTu as gagné');
-      coucheImage.removeFrom(grillebomb);
-      coucheImage = new L.LayerGroup();
-      grillebomb.addLayer(coucheImage);
-        // Affichage grille bombes
-        var resultat_bomb = L.geoJSON(PM10,{
-          style : {fillColor : "#FFFFFF",
-          weight: 2,
-          opacity: 1,
-          color: "#CCCCCC",
-          fillOpacity: 0.1},
-          onEachFeature : endgame
-      }).addTo(map);  
-        // ajouter la couche d'analyse 
-      visualisation(PM10)
-      test.removeFrom(grillebomb)
-  }
+   
+    if (nb_case_ouv >= (100-nbbombtot)){
+      // enlever la grille du jeu
+          alert('ENORME !!!! \nTu as gagné');
+          coucheImage.removeFrom(grillebomb);
+          coucheImage = new L.LayerGroup();
+          grillebomb.addLayer(coucheImage);
+            // Affichage grille bombes
+            var resultat_bomb = L.geoJSON(PM10,{
+              style : {fillColor : "#FFFFFF",
+              weight: 2,
+              opacity: 1,
+              color: "#CCCCCC",
+              fillOpacity: 0.1},
+              onEachFeature : endgame
+          }).addTo(map);  
+            // ajouter la couche d'analyse 
+          visualisation(PM10)
+          test.removeFrom(grillebomb)
+      }
 }
 
 // PARTIE PERDUE
@@ -421,10 +423,11 @@ perdu = function(e) {
           opacity: 1,
           color: "#CCCCCC",
           fillOpacity: 0.1},
-          onEachFeature : add_all_img_resultat
+          onEachFeature : endgame
       }).addTo(map);
       // ajouter la couche d'analyse 
       visualisation(PM10)
+     
       test.removeFrom(grillebomb)      
      }
 }
@@ -435,44 +438,16 @@ endgame = function(feature,layer){
   add_all_img_resultat(feature,layer)
 }
 
-//////////////////////////////////////////////////////////////////////// DOUBLE LEGENDE //////////////////////////////////////////////////////////////////////////////////
 
-/*totmap = new L.LayerGroup();
-totmap.addTo(map);
 
-var analtot = L.choropleth(PM10tot, {
-    valueProperty: 'Classe',
-    scale: ["#440154","#31688e","#35b779","#fde725"],
-    steps: 4, // Nombre de classes
-    mode: 'q',
-    style: {
-      weight: 2,
-      fillOpacity: 0.8,
-      opacity: 1,
-      color: "#CCCCCC"
+
+x = document.getElementById("myDIV")
+x.style.display = "none"
+function myFunction() {
+  var x = document.getElementById("myDIV");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
   }
-})
-
-// LEGENDE
-
- var legendtot = L.control({ position: 'bottomright' })
-  legendtot.onAdd = function (map) {
-    var div = L.DomUtil.create('div', 'info legend')
-    var limits = analtot.options.limits
-    var colors = analtot.options.scale
-    var labels = []
-
-    // Add min & max
-    div.innerHTML = '<div class="labels"></div>' + '<div class="min">' + limits[0] + '</div> \
-      <div class="max">' + limits[limits.length - 1] + '</div></div>'
-
-    limits.forEach(function (limit, index) {
-      labels.push('<li style="background-color: ' + colors[index] + '"></li>')
-    })
-
-    div.innerHTML += '<ul>' + labels.join('') + '</ul>'
-    return div
-  }
-
-legendtot.addTo(map)*/
-//////////////////////////////////////////////////////////////////////// BOUTON DEZOOM ///////////////////////////////////////////////////////////////////////////////////
+}
