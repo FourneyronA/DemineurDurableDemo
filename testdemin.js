@@ -435,44 +435,15 @@ endgame = function(feature,layer){
   add_all_img_resultat(feature,layer)
 }
 
-//////////////////////////////////////////////////////////////////////// DOUBLE LEGENDE //////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////// NP PAGES //////////////////////////////////////////////////////////////////////////////////
 
-/*totmap = new L.LayerGroup();
-totmap.addTo(map);
-
-var analtot = L.choropleth(PM10tot, {
-    valueProperty: 'Classe',
-    scale: ["#440154","#31688e","#35b779","#fde725"],
-    steps: 4, // Nombre de classes
-    mode: 'q',
-    style: {
-      weight: 2,
-      fillOpacity: 0.8,
-      opacity: 1,
-      color: "#CCCCCC"
+x = document.getElementById("myDIV")
+x.style.display = "none"
+function myFunction() {
+  var x = document.getElementById("myDIV");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
   }
-})
-
-// LEGENDE
-
- var legendtot = L.control({ position: 'bottomright' })
-  legendtot.onAdd = function (map) {
-    var div = L.DomUtil.create('div', 'info legend')
-    var limits = analtot.options.limits
-    var colors = analtot.options.scale
-    var labels = []
-
-    // Add min & max
-    div.innerHTML = '<div class="labels"></div>' + '<div class="min">' + limits[0] + '</div> \
-      <div class="max">' + limits[limits.length - 1] + '</div></div>'
-
-    limits.forEach(function (limit, index) {
-      labels.push('<li style="background-color: ' + colors[index] + '"></li>')
-    })
-
-    div.innerHTML += '<ul>' + labels.join('') + '</ul>'
-    return div
-  }
-
-legendtot.addTo(map)*/
-//////////////////////////////////////////////////////////////////////// BOUTON DEZOOM ///////////////////////////////////////////////////////////////////////////////////
+}
