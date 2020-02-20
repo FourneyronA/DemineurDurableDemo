@@ -438,8 +438,12 @@ endgame = function(feature,layer){
   add_all_img_resultat(feature,layer)
 }
 
+<<<<<<< HEAD
 
 
+=======
+//////////////////////////////////////////////////////////////////////// NP PAGES //////////////////////////////////////////////////////////////////////////////////
+>>>>>>> gh-pages
 
 x = document.getElementById("myDIV")
 x.style.display = "none"
@@ -450,4 +454,8 @@ function myFunction() {
   } else {
     x.style.display = "block";
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> gh-pages
