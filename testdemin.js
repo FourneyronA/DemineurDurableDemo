@@ -149,13 +149,13 @@ function onclick_droit(e) {
 function style_analyse(e) {
   remove_drapeau(e);
   if (e.feature.properties.Classe == 0) {
-    e.setStyle({fillColor : "#440154"})
+    e.setStyle({fillColor : "#C6DA4B"})
   } else if (e.feature.properties.Classe == 1) {
-    e.setStyle({fillColor : "#31688e"})      
+    e.setStyle({fillColor : "#FEAB01"})      
   } else if (e.feature.properties.Classe == 2) {
-    e.setStyle({fillColor : "#35b779"})  
+    e.setStyle({fillColor : "#CA1312"})  
   } else if (e.feature.properties.Classe == 3) {
-    e.setStyle({fillColor : "#fde725"})  
+    e.setStyle({fillColor : "#7A318C"})  
   } 
 }
 
@@ -252,7 +252,7 @@ function visualisation(Donnees_JSON){
 
   var Anal=L.choropleth(Donnees_JSON, {
     valueProperty: 'Classe',
-    scale: ["#440154","#31688e","#35b779","#fde725"],
+    scale: ["#C6DA4B","#FEAB01","#CA1312","#7A318C"],
     steps: 4, // Nombre de classes
     mode: 'q',
     style: {
@@ -305,20 +305,6 @@ function decouverte_case(bloc){
           };
           layer2.feature.properties.ouvert = true;
           update_encart(info);
-
-          //console.log('MES CASES BOMBE A COTEE :' + layer2.feature.properties.Bombnum + ' GID : ' + layer2.feature.properties.gid);
-          /*
-          var lim2 = layer2.getBounds();
-          var buffer2 = lim2.pad(0.1);
-          test.eachLayer(function(layer3){
-            if (buffer2.intersects(layer3._latlngs) == true){
-              if (layer3.feature.properties.Bombnum != 99 ){
-                style_analyse(layer3);
-                add_image_info(layer3);
-                console.log('MES CASES BOMBE A COTEE :' + layer3.feature.properties.Bombnum + ' GID : ' + layer3.feature.properties.gid);
-              } 
-            }
-          }) */
         }
       }
     })
@@ -438,15 +424,9 @@ endgame = function(feature,layer){
   add_all_img_resultat(feature,layer)
 }
 
-<<<<<<< HEAD
-
-
-=======
-//////////////////////////////////////////////////////////////////////// NP PAGES //////////////////////////////////////////////////////////////////////////////////
->>>>>>> gh-pages
-
 x = document.getElementById("myDIV")
 x.style.display = "none"
+
 function myFunction() {
   var x = document.getElementById("myDIV");
   if (x.style.display === "block") {
@@ -454,8 +434,4 @@ function myFunction() {
   } else {
     x.style.display = "block";
   }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> gh-pages
