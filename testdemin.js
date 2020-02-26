@@ -148,13 +148,13 @@ function onclick_droit(e) {
 function style_analyse(e) {
   remove_drapeau(e);
   if (e.feature.properties.Classe == 0) {
-    e.setStyle({fillColor : "#440154"})
+    e.setStyle({fillColor : "#C6DA4B"})
   } else if (e.feature.properties.Classe == 1) {
-    e.setStyle({fillColor : "#31688e"})      
+    e.setStyle({fillColor : "#FEAB01"})      
   } else if (e.feature.properties.Classe == 2) {
-    e.setStyle({fillColor : "#35b779"})  
+    e.setStyle({fillColor : "#CA1312"})  
   } else if (e.feature.properties.Classe == 3) {
-    e.setStyle({fillColor : "#fde725"})  
+    e.setStyle({fillColor : "#7A318C"})  
   } 
 }
 
